@@ -208,6 +208,11 @@
     ],
     "setup": [
       {
+        "type": "text",
+        "label": "Install the Obsidian REST API plugin",
+        "value": "Open the plugin settings in Obsidian and install the [Local REST API](obsidian://show-plugin?id=obsidian-local-rest-api) plugin"
+      },
+      {
         "label": "Obsidian API Key",
         "type": "input",
         "placeholder": "Enter your Obsidian API key",
