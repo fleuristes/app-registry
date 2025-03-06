@@ -2,10 +2,6 @@
 
 This repository serves as the official app registry for Fleur, a [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) GUI client. It contains a curated list of MCP applications that can be integrated with Fleur to extend its capabilities.
 
-## What is Fleur?
-
-Fleur is a macOS GUI client for Model Context Protocol (MCP) applications. It allows users to seamlessly integrate various tools and services with large language models like Claude, enhancing their capabilities through external data access and tool use. All without having to be familiar with the command line.
-
 ## What is MCP?
 
 Model Context Protocol (MCP) is a standardized way for language models to interact with external tools and data sources. MCPs enable models to:
