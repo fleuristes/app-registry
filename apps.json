@@ -109,8 +109,12 @@
     ],
     "setup": [
       {
+        "label": "Create an API Key",
+        "value": "Create or get a Linear API key for your team: https://linear.app/settings/api",
+        "type": "text"
+      },
+      {
         "label": "Linear API Key",
-        "description": "Create or get a Linear API key for your team: https://linear.app/settings/api",
         "type": "input",
         "placeholder": "Enter your Linear API key",
         "value": "Enter your Linear API key",
