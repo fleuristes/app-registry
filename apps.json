@@ -39,7 +39,7 @@
   {
     "name": "Hacker News",
     "description": "Hacker News MCP which allows Claude to get the top stories on Hacker News and summarize discussion threads.",
-    "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer",
+    "sourceUrl": "https://github.com/erithwik/mcp-hn",
     "icon": {
       "type": "url",
       "url": {
@@ -76,7 +76,7 @@
   {
     "name": "Linear",
     "description": "Allows Claude to interact with Linear",
-    "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer",
+    "sourceUrl": "https://github.com/jerhadf/linear-mcp-server",
     "icon": {
       "type": "url",
       "url": {
@@ -108,6 +108,11 @@
       }
     ],
     "setup": [
+      {
+        "label": "Create an API Key",
+        "value": "Create or get a Linear API key for your team: [https://linear.app/settings/api](https://linear.app/settings/api)",
+        "type": "text"
+      },
       {
         "label": "Linear API Key",
         "type": "input",
@@ -203,6 +208,11 @@
     ],
     "setup": [
       {
+        "type": "text",
+        "label": "Install the Obsidian REST API plugin",
+        "value": "Open the plugin settings in Obsidian and install the [Local REST API](obsidian://show-plugin?id=obsidian-local-rest-api) plugin"
+      },
+      {
         "label": "Obsidian API Key",
         "type": "input",
         "placeholder": "Enter your Obsidian API key",
@@ -246,6 +256,11 @@
       }
     ],
     "setup": [
+      {
+        "label": "Create an API Key",
+        "value": "Create or get a Rember API key: [Settings > Rember MCP Server](https://www.rember.com/settings#rember-mcp-server)",
+        "type": "text"
+      },
       {
         "label": "Rember API Key",
         "type": "input",
