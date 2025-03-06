@@ -110,7 +110,7 @@
     "setup": [
       {
         "label": "Create an API Key",
-        "value": "Create or get a Linear API key for your team: [https://linear.app/settings/api](https://linear.app/settings/api)",
+        "value": "Create or get a Personal API key for your account: [https://linear.app/settings/account/security](https://linear.app/settings/account/security)",
         "type": "text"
       },
       {
