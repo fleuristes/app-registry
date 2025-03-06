@@ -37,38 +37,6 @@
     "setup": []
   },
   {
-    "name": "Time",
-    "description": "Get the current time",
-    "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer",
-    "icon": {
-      "type": "url",
-      "url": {
-        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/browser.svg",
-        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/browser.svg"
-      }
-    },
-    "category": "Utilities",
-    "price": "Free",
-    "developer": "Model Context Protocol",
-    "config": {
-      "mcpKey": "time",
-      "runtime": "uvx",
-      "args": [
-        "--from",
-        "git+https://github.com/modelcontextprotocol/servers.git#subdirectory=src/time",
-        "mcp-server-time"
-      ]
-    },
-    "features": [
-      {
-        "name": "Get the current time",
-        "description": "Get the current time",
-        "prompt": "What is the current time?"
-      }
-    ],
-    "setup": []
-  },
-  {
     "name": "Hacker News",
     "description": "Hacker News MCP which allows Claude to get the top stories on Hacker News and summarize discussion threads.",
     "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer",
