@@ -224,10 +224,14 @@
     },
     "features": [
       {
-        "name": "Create flashcards",
-        "description": "Create flashcards in Rember",
-        "prompt": "Add to Rember..."
-      }
+        "name": "Create flashcards from your chats",
+        "description": "Create flashcards from your chats",
+        "prompt": "... I like your answer, help me remember it"
+      },
+      {
+        "name": "Create flashcards from your PDFs",
+        "description": "Create flashcards from your PDFs",
+        "prompt": "Create flashcards from chapter 2 of this PDF"
     ],
     "setup": [
       {
