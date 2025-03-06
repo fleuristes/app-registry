@@ -232,6 +232,7 @@
         "name": "Create flashcards from your PDFs",
         "description": "Create flashcards from your PDFs",
         "prompt": "Create flashcards from chapter 2 of this PDF"
+      }
     ],
     "setup": [
       {
