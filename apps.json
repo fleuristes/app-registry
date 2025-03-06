@@ -202,12 +202,12 @@
   },
   {
     "name": "Rember",
-    "description": "Allow Claude to create flashcards for you with the official MCP for Rember. Rember helps you study and remember anything you care about by scheduling spaced repetition reviews.",
+    "description": "Rember MCP allows Claude to create flashcards to help you remember anything you can about.",
     "icon": {
       "type": "url",
       "url": {
-        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/rember.svg",
-        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/rember.svg"
+        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/rember.png",
+        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/rember.png"
       }
     },
     "category": "Education",
@@ -224,14 +224,9 @@
     },
     "features": [
       {
-        "name": "Create flashcards from your chats",
-        "description": "Create flashcards from your chats",
-        "prompt": "... I like your answer, help me remember it"
-      },
-      {
-        "name": "Create flashcards from your PDFs",
-        "description": "Create flashcards from your PDFs",
-        "prompt": "Create flashcards from chapter 2 of this PDF"
+        "name": "Create flashcards",
+        "description": "Create flashcards in Rember",
+        "prompt": "Add to Rember..."
       }
     ],
     "setup": [
