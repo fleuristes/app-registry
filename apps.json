@@ -117,7 +117,7 @@
       }
     },
     "category": "Productivity",
-    "price": "Get",
+    "price": "Free",
     "developer": "Linear",
     "config": {
       "mcpKey": "linear",
@@ -201,46 +201,45 @@
     ]
   },
   {
-    "name": "Rember",
-    "description": "Allow Claude to create flashcards for you with the official MCP for Rember. Rember helps you study and remember anything you care about by scheduling spaced repetition reviews.",
+    "name": "Obsidian",
+    "description": "Allows Claude to interact with your Obsidian vault, search notes, and retrieve content",
+    "sourceUrl": "https://github.com/MarkusPfundstein/mcp-obsidian",
     "icon": {
       "type": "url",
       "url": {
-        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/rember.png",
-        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/rember.png"
+        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/obsidian.svg",
+        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/obsidian.svg"
       }
     },
-    "category": "Education",
+    "category": "Productivity",
     "price": "Free",
-    "developer": "Rember",
-    "sourceUrl": "https://github.com/rember/rember-mcp",
+    "developer": "Markus Pfundstein",
     "config": {
-      "mcpKey": "rember",
-      "runtime": "npx",
+      "mcpKey": "obsidian",
+      "runtime": "uvx",
       "args": [
-        "-y",
-        "@getrember/mcp"
+        "mcp-obsidian"
       ]
     },
     "features": [
       {
-        "name": "Create flashcards from your chats",
-        "description": "Create flashcards from your chats",
-        "prompt": "... I like your answer, help me remember it"
+        "name": "Search Obsidian notes",
+        "description": "Search for notes in your Obsidian vault",
+        "prompt": "Find notes in my Obsidian vault about..."
       },
       {
-        "name": "Create flashcards from your PDFs",
-        "description": "Create flashcards from your PDFs",
-        "prompt": "Create flashcards from chapter 2 of this PDF"
+        "name": "Retrieve note content",
+        "description": "Get the content of specific notes from your Obsidian vault",
+        "prompt": "Show me my Obsidian note about..."
       }
     ],
     "setup": [
       {
-        "label": "Rember API Key",
+        "label": "Obsidian API Key",
         "type": "input",
-        "placeholder": "Enter your Rember API key, you can find it in the Settings",
-        "value": "Enter your Rember API key, you can find it in the Settings",
-        "key": "REMBER_API_KEY"
+        "placeholder": "Enter your Obsidian API key",
+        "value": "Enter your Obsidian API key",
+        "key": "OBSIDIAN_API_KEY"
       }
     ]
   }
