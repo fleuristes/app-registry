@@ -39,7 +39,7 @@
   {
     "name": "Hacker News",
     "description": "Hacker News MCP which allows Claude to get the top stories on Hacker News and summarize discussion threads.",
-    "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer",
+    "sourceUrl": "https://github.com/erithwik/mcp-hn",
     "icon": {
       "type": "url",
       "url": {
@@ -76,7 +76,7 @@
   {
     "name": "Linear",
     "description": "Allows Claude to interact with Linear",
-    "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer",
+    "sourceUrl": "https://github.com/jerhadf/linear-mcp-server",
     "icon": {
       "type": "url",
       "url": {
@@ -110,6 +110,7 @@
     "setup": [
       {
         "label": "Linear API Key",
+        "description": "Create or get a Linear API key for your team: https://linear.app/settings/api",
         "type": "input",
         "placeholder": "Enter your Linear API key",
         "value": "Enter your Linear API key",
