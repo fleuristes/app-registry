@@ -202,7 +202,7 @@
   },
   {
     "name": "Rember",
-    "description": "Rember MCP allows Claude to create flashcards to help you remember anything you can about.",
+    "description": "Allow Claude to create flashcards for you with the official MCP for Rember. Rember helps you study and remember anything you care about by scheduling spaced repetition reviews.",
     "icon": {
       "type": "url",
       "url": {
