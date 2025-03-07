@@ -258,15 +258,15 @@
     ],
     "setup": [
       {
-        "label": "Create an API Key",
-        "value": "Create or get a Rember API key: [Settings > Rember MCP Server](https://www.rember.com/settings#rember-mcp-server)",
+        "label": "Get an API Key",
+        "value": "You can find your Rember API key in [Settings > MCP & API](https://www.rember.com/settings/mcp-api).",
         "type": "text"
       },
       {
         "label": "Rember API Key",
         "type": "input",
-        "placeholder": "Enter your Rember API key, you can find it in the Settings",
-        "value": "Enter your Rember API key, you can find it in the Settings",
+        "placeholder": "Enter your Rember API key",
+        "value": "Enter your Rember API key",
         "key": "REMBER_API_KEY"
       }
     ]
