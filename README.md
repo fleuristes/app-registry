@@ -1,6 +1,6 @@
 # Fleur App Registry
 
-This repository serves as the official app registry for Fleur, a [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) GUI client. It contains a curated list of MCP applications that can be integrated with Fleur to extend its capabilities.
+This repository serves as the official app registry for [Fleur](https://github.com/fleuristes/fleur), an open-source [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) GUI client. It contains a curated list of MCP applications that can be integrated with Fleur to extend its capabilities.
 
 ## What is MCP?
 
