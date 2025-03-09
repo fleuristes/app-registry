@@ -16,7 +16,9 @@
     "config": {
       "mcpKey": "fetch",
       "runtime": "uvx",
-      "args": ["mcp-server-fetch"]
+      "args": [
+        "mcp-server-fetch"
+      ]
     },
     "features": [
       {
@@ -49,7 +51,10 @@
     "config": {
       "mcpKey": "memory",
       "runtime": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-memory"]
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ]
     },
     "features": [
       {
@@ -82,7 +87,10 @@
     "config": {
       "mcpKey": "filesystem",
       "runtime": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-github"]
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ]
     },
     "features": [
       {
@@ -178,7 +186,10 @@
     "config": {
       "mcpKey": "slack",
       "runtime": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-slack"]
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-slack"
+      ]
     },
     "features": [
       {
@@ -226,7 +237,9 @@
     "config": {
       "mcpKey": "obsidian",
       "runtime": "uvx",
-      "args": ["mcp-obsidian"]
+      "args": [
+        "mcp-obsidian"
+      ]
     },
     "features": [
       {
@@ -272,7 +285,10 @@
     "config": {
       "mcpKey": "rember",
       "runtime": "npx",
-      "args": ["-y", "@getrember/mcp"]
+      "args": [
+        "-y",
+        "@getrember/mcp"
+      ]
     },
     "features": [
       {
@@ -318,7 +334,11 @@
     "config": {
       "mcpKey": "puppeteer",
       "runtime": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-puppeteer", "--debug"]
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-puppeteer",
+        "--debug"
+      ]
     },
     "features": [
       {
@@ -351,7 +371,11 @@
     "config": {
       "mcpKey": "hn",
       "runtime": "uvx",
-      "args": ["--from", "git+https://github.com/erithwik/mcp-hn", "mcp-hn"]
+      "args": [
+        "--from",
+        "git+https://github.com/erithwik/mcp-hn",
+        "mcp-hn"
+      ]
     },
     "features": [
       {
