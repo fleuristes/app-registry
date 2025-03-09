@@ -1,77 +1,123 @@
 [
   {
-    "name": "Browser",
-    "description": "This is a browser app that allows Claude to navigate to any website, take screenshots, and interact with the page.",
+    "name": "Fetch",
+    "description": "This app enables Claude to retrieve and process content from web pages, converting HTML to markdown for easier consumption.",
     "icon": {
       "type": "url",
       "url": {
-        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/browser.svg",
-        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/browser.svg"
+        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/fetch-light.svg",
+        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/fetch-dark.svg"
       }
     },
     "category": "Utilities",
     "price": "Free",
-    "developer": "Google LLC",
-    "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer",
+    "developer": "MCP",
+    "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch",
     "config": {
-      "mcpKey": "puppeteer",
-      "runtime": "npx",
+      "mcpKey": "fetch",
+      "runtime": "uvx",
       "args": [
-        "-y",
-        "@modelcontextprotocol/server-puppeteer",
-        "--debug"
+        "mcp-server-fetch"
       ]
     },
     "features": [
       {
-        "name": "Navigate to any website",
-        "description": "Navigate to any URL in the browser",
-        "prompt": "Navigate to the URL google.com and..."
+        "name": "Process web pages",
+        "description": "Extract and analyze information from web pages",
+        "prompt": "Get the top article from nytimes.com and summarize it"
       },
       {
-        "name": "Interact with any website - search, click, scroll, screenshot, etc.",
-        "description": "Click elements on the page",
-        "prompt": "Go to google.com and search for..."
+        "name": "Convert HTML to markdown",
+        "description": "Transform web page HTML into readable markdown format",
+        "prompt": "Fetch this documentation page and convert it to markdown for me"
       }
     ],
     "setup": []
   },
   {
-    "name": "Hacker News",
-    "description": "Hacker News MCP which allows Claude to get the top stories on Hacker News and summarize discussion threads.",
-    "sourceUrl": "https://github.com/erithwik/mcp-hn",
+    "name": "Memory",
+    "description": "This app lets Claude remember information about the user across chats.",
     "icon": {
       "type": "url",
       "url": {
-        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/yc.svg",
-        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/yc.svg"
+        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/memory-light.svg",
+        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/memory-dark.svg"
       }
     },
-    "category": "Social",
+    "category": "Utilities",
     "price": "Free",
-    "developer": "Y Combinator",
+    "developer": "MCP",
+    "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
     "config": {
-      "mcpKey": "hn",
-      "runtime": "uvx",
+      "mcpKey": "memory",
+      "runtime": "npx",
       "args": [
-        "--from",
-        "git+https://github.com/erithwik/mcp-hn",
-        "mcp-hn"
+        "-y",
+        "@modelcontextprotocol/server-memory"
       ]
     },
     "features": [
       {
-        "name": "Get the top stories on Hacker News",
-        "description": "Get the top stories on Hacker News",
-        "prompt": "What are the top stories on Hacker News?"
+        "name": "Remember user information",
+        "description": "Store and recall information about the user across conversations",
+        "prompt": "Remember that John likes to play soccer"
       },
       {
-        "name": "Summarize discussion threads on Hacker News",
-        "description": "Summarize discussion threads on Hacker News",
-        "prompt": "Summarize the discussion thread on Hacker News titled..."
+        "name": "Recall previous conversations",
+        "description": "Access information from past interactions with the user",
+        "prompt": "What did John tell me about his job last time we talked?"
       }
     ],
     "setup": []
+  },
+  {
+    "name": "Github",
+    "description": "This app lets Claude use the GitHub API, enabling file operations, repository management, search functionality, and more.",
+    "icon": {
+      "type": "url",
+      "url": {
+        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/github-light.svg",
+        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/github-dark.svg"
+      }
+    },
+    "category": "Utilities",
+    "price": "Free",
+    "developer": "MCP",
+    "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/github",
+    "config": {
+      "mcpKey": "filesystem",
+      "runtime": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ]
+    },
+    "features": [
+      {
+        "name": "Create or update files",
+        "description": "Create or update a file in a GitHub repository",
+        "prompt": "Create a README file for my project and push it to my repository at github.com/username/repo"
+      },
+      {
+        "name": "Summarize open issues",
+        "description": "Fetch and summarize all open issues in a GitHub repository",
+        "prompt": "Summarize all open issues in my repository at github.com/username/repo"
+      }
+    ],
+    "setup": [
+      {
+        "label": "Create a GitHub Personal Access Token",
+        "value": "Create a personal access token for your account: [https://github.com/settings/tokens](https://github.com/settings/tokens)",
+        "type": "text"
+      },
+      {
+        "label": "GitHub Personal Access Token",
+        "type": "input",
+        "placeholder": "Enter your GitHub Personal Access Token",
+        "value": "Enter your GitHub Personal Access Token",
+        "key": "GITHUB_PERSONAL_ACCESS_TOKEN"
+      }
+    ]
   },
   {
     "name": "Linear",
@@ -270,5 +316,79 @@
         "key": "REMBER_API_KEY"
       }
     ]
+  },
+  {
+    "name": "Browser",
+    "description": "This is a browser app that allows Claude to navigate to any website, take screenshots, and interact with the page.",
+    "icon": {
+      "type": "url",
+      "url": {
+        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/browser-light.svg",
+        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/browser-dark.svg"
+      }
+    },
+    "category": "Utilities",
+    "price": "Free",
+    "developer": "Google LLC",
+    "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer",
+    "config": {
+      "mcpKey": "puppeteer",
+      "runtime": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-puppeteer",
+        "--debug"
+      ]
+    },
+    "features": [
+      {
+        "name": "Navigate to any website",
+        "description": "Navigate to any URL in the browser",
+        "prompt": "Navigate to the URL google.com and..."
+      },
+      {
+        "name": "Interact with any website - search, click, scroll, screenshot, etc.",
+        "description": "Click elements on the page",
+        "prompt": "Go to google.com and search for..."
+      }
+    ],
+    "setup": []
+  },
+  {
+    "name": "Hacker News",
+    "description": "Hacker News MCP which allows Claude to get the top stories on Hacker News and summarize discussion threads.",
+    "sourceUrl": "https://github.com/erithwik/mcp-hn",
+    "icon": {
+      "type": "url",
+      "url": {
+        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/yc.svg",
+        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/yc.svg"
+      }
+    },
+    "category": "Social",
+    "price": "Free",
+    "developer": "Y Combinator",
+    "config": {
+      "mcpKey": "hn",
+      "runtime": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/erithwik/mcp-hn",
+        "mcp-hn"
+      ]
+    },
+    "features": [
+      {
+        "name": "Get the top stories on Hacker News",
+        "description": "Get the top stories on Hacker News",
+        "prompt": "What are the top stories on Hacker News?"
+      },
+      {
+        "name": "Summarize discussion threads on Hacker News",
+        "description": "Summarize discussion threads on Hacker News",
+        "prompt": "Summarize the discussion thread on Hacker News titled..."
+      }
+    ],
+    "setup": []
   }
 ]
