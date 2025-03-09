@@ -390,5 +390,51 @@
       }
     ],
     "setup": []
+  },
+  {
+    "name": "Fingertip.com",
+    "description": "Fingertip.com MCP which allows Claude to search your sites and create new sites",
+    "sourceUrl": "https://github.com/fingertip-com/fingertip-mcp",
+    "icon": {
+      "type": "url",
+      "url": {
+        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/fingertip.svg",
+        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/fingertip.svg"
+      }
+    },
+    "category": "Utilities",
+    "price": "Free",
+    "developer": "Fingertip",
+    "config": {
+      "mcpKey": "fingertip",
+      "runtime": "npx",
+      "args": ["-y", "@fingertip/mcp"]
+    },
+    "features": [
+      {
+        "name": "List your sites",
+        "description": "List your sites on Fingertip.com",
+        "prompt": "What are the my most recent Fingertip sites?"
+      },
+      {
+        "name": "Create a new site",
+        "description": "Create a new site on Fingertip.com",
+        "prompt": "Create a new site on Fingertip"
+      }
+    ],
+    "setup": [
+      {
+        "label": "Create an API Key",
+        "value": "Create or get an API key for your account: [https://fingertip.com/account/api](https://fingertip.com/account/api)",
+        "type": "text"
+      },
+      {
+        "label": "Fingertip API Key",
+        "type": "input",
+        "placeholder": "Enter your Fingertip API key",
+        "value": "Enter your Fingertip API key",
+        "key": "FINGERTIP_API_KEY"
+      }
+    ]
   }
 ]
