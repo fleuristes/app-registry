@@ -270,7 +270,7 @@
   },
   {
     "name": "Rember",
-    "description": "Allow Claude to create flashcards for you with the official MCP for Rember. Rember helps you study and remember anything you care about by scheduling spaced repetition reviews.",
+    "description": "Allow Claude to create flashcards for you with the official MCP for Rember. Rember helps you study and remember anything you care about by scheduling spaced repetition reviews.\n\nSign up at [rember.com](https://www.rember.com/)",
     "icon": {
       "type": "url",
       "url": {
@@ -278,7 +278,7 @@
         "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/rember.png"
       }
     },
-    "category": "Education",
+    "category": "Flashcards",
     "price": "Free",
     "developer": "Rember",
     "sourceUrl": "https://github.com/rember/rember-mcp",
