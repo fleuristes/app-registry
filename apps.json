@@ -390,5 +390,83 @@
       }
     ],
     "setup": []
+  },
+  {
+    "name": "Tradovate",
+    "description": "This app enables Claude to manage Tradovate trading accounts through natural language interactions, providing access to real-time market data, account management, and trading operations.",
+    "icon": {
+      "type": "url",
+      "url": {
+        "light": "https://www.tradovate.com/static/3547c302fdade02d16772bf9b7787302/0128b/Tradovate-whitebg.png",
+        "dark": "https://www.tradovate.com/static/018ca1a1bfd4a51bbb4e15078cfaeddd/0128b/Tradovate-darkbg.png"
+      }
+    },
+    "category": "Finance",
+    "price": "Free",
+    "developer": "Jake Peterson",
+    "sourceUrl": "https://github.com/0xjmp/mcp-tradovate",
+    "config": {
+      "mcpKey": "tradovate",
+      "runtime": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/0xjmp/mcp-tradovate",
+        "mcp-tradovate"
+      ]
+    },
+    "features": [
+      {
+        "name": "Manage trading accounts",
+        "description": "View accounts, positions, and risk management settings",
+        "prompt": "Show me my current trading positions"
+      },
+      {
+        "name": "Execute trades",
+        "description": "Place and manage orders in your Tradovate account",
+        "prompt": "Place a market order for 1 contract of ES"
+      }
+    ],
+    "setup": [
+      {
+        "label": "Tradovate Credentials",
+        "value": "Get your Tradovate API credentials from your account settings",
+        "type": "text"
+      },
+      {
+        "label": "Username",
+        "type": "input",
+        "placeholder": "Enter your Tradovate username",
+        "value": "Enter your Tradovate username",
+        "key": "TRADOVATE_USERNAME"
+      },
+      {
+        "label": "Password",
+        "type": "input",
+        "placeholder": "Enter your Tradovate password",
+        "value": "Enter your Tradovate password",
+        "key": "TRADOVATE_PASSWORD"
+      },
+      {
+        "label": "App ID",
+        "type": "input",
+        "placeholder": "Enter your Tradovate App ID",
+        "value": "Enter your Tradovate App ID",
+        "key": "TRADOVATE_APP_ID"
+      },
+      {
+        "label": "Client ID",
+        "type": "input",
+        "placeholder": "Enter your Tradovate Client ID",
+        "value": "Enter your Tradovate Client ID",
+        "key": "TRADOVATE_CID"
+      },
+      {
+        "label": "Client Secret",
+        "type": "input",
+        "placeholder": "Enter your Tradovate Client Secret",
+        "value": "Enter your Tradovate Client Secret",
+        "key": "TRADOVATE_SEC"
+      }
+    ]
   }
 ]
