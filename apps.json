@@ -411,10 +411,8 @@
       "args": [
         "-y",
         "@stripe/mcp",
-        "--tools",
-        "all",
-        "--api-key",
-        "${STRIPE_API_KEY}"
+        "--tools=all",
+        "--api-key=${STRIPE_API_KEY}"
       ]
     },
     "features": [
@@ -440,10 +438,7 @@
         "type": "input",
         "placeholder": "Enter your Stripe API key",
         "value": "Enter your Stripe API key",
-        "key": "STRIPE_API_KEY",
-        "passAsArg": {
-          "flag": "--api-key"
-        }
+        "key": "STRIPE_API_KEY"
       }
     ]
   }
