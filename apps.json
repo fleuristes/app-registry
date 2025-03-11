@@ -410,7 +410,9 @@
       "runtime": "npx",
       "args": [
         "-y",
-        "@stripe/mcp"
+        "@stripe/mcp",
+        "--tools",
+        "all"
       ]
     },
     "features": [
@@ -436,7 +438,10 @@
         "type": "input",
         "placeholder": "Enter your Stripe API key",
         "value": "Enter your Stripe API key",
-        "key": "STRIPE_API_KEY"
+        "key": "STRIPE_API_KEY",
+        "passAsArg": {
+          "flag": "--api-key"
+        }
       }
     ]
   }
