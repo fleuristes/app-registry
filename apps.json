@@ -410,9 +410,7 @@
       "runtime": "npx",
       "args": [
         "-y",
-        "@stripe/mcp",
-        "--tools",
-        "all"
+        "@stripe/mcp"
       ]
     },
     "features": [
