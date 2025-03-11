@@ -412,7 +412,9 @@
         "-y",
         "@stripe/mcp",
         "--tools",
-        "all"
+        "all",
+        "--api-key",
+        "${STRIPE_API_KEY}"
       ]
     },
     "features": [
