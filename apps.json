@@ -430,7 +430,7 @@
     "setup": [
       {
         "label": "Get an API Key",
-        "value": "You can find your Stripe API key in the Stripe Dashboard under Developers > API keys.",
+        "value": "You can find your Stripe API key in the [Stripe Dashboard](https://dashboard.stripe.com/apikeys) under Developers > API keys.",
         "type": "text"
       },
       {
