@@ -390,5 +390,56 @@
       }
     ],
     "setup": []
+  },
+  {
+    "name": "Stripe",
+    "description": "Allows Claude to interact with Stripe for payment processing and managing financial data.",
+    "icon": {
+      "type": "url",
+      "url": {
+        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/stripe.svg",
+        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/stripe.svg"
+      }
+    },
+    "category": "Finance",
+    "price": "Free",
+    "developer": "Stripe",
+    "sourceUrl": "https://github.com/stripe/stripe-mcp",
+    "config": {
+      "mcpKey": "stripe",
+      "runtime": "npx",
+      "args": [
+        "-y",
+        "@stripe/mcp",
+        "--tools",
+        "all"
+      ]
+    },
+    "features": [
+      {
+        "name": "View payment information",
+        "description": "Retrieve and analyze payment data from your Stripe account",
+        "prompt": "Show me recent payments in my Stripe account"
+      },
+      {
+        "name": "Manage customers and invoices",
+        "description": "View and manage customer information and invoices",
+        "prompt": "Create a new invoice for customer X in Stripe"
+      }
+    ],
+    "setup": [
+      {
+        "label": "Get an API Key",
+        "value": "You can find your Stripe API key in the Stripe Dashboard under Developers > API keys.",
+        "type": "text"
+      },
+      {
+        "label": "Stripe API Key",
+        "type": "input",
+        "placeholder": "Enter your Stripe API key",
+        "value": "Enter your Stripe API key",
+        "key": "STRIPE_API_KEY"
+      }
+    ]
   }
 ]
