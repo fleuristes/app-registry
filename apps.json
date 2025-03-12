@@ -441,5 +441,43 @@
         "key": "STRIPE_API_KEY"
       }
     ]
+  },
+  {
+    "name": "Browser Use",
+    "description": "Allows Claude to run agentic tasks using a Chromium browser.",
+    "icon": {
+      "type": "url",
+      "url": {
+        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/chromium.svg",
+        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/chromium.svg"
+      }
+    },
+    "category": "Utilities",
+    "price": "Free",
+    "developer": "June",
+    "sourceUrl": "https://github.com/pranav7/browser-mcp",
+    "config": {
+      "mcpKey": "browser-mcp",
+      "runtime": "uvx",
+      "args": [
+        "browser-mcp"
+      ]
+    },
+    "features": [
+      {
+        "name": "Run agentic tasks using a Chromium browser",
+        "description": "Run agentic tasks using a Chromium browser",
+        "prompt": "Go to google.com and search for..."
+      }
+    ],
+    "setup": [
+      {
+        "label": "OpenAI API Key",
+        "value": "Enter your OpenAI API key. You can get one at [https://platform.openai.com/api-keys](platform.openai.com/api-keys)",
+        "type": "input",
+        "placeholder": "Enter your OpenAI API key",
+        "key": "OPENAI_API_KEY"
+      }
+    ]
   }
 ]
