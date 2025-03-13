@@ -499,6 +499,8 @@
       "mcpKey": "browser-mcp",
       "runtime": "uvx",
       "args": [
+        "--from",
+        "git+https://github.com/pranav7/browser-mcp",
         "browser-mcp"
       ]
     },
