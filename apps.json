@@ -85,7 +85,7 @@
     "developer": "MCP",
     "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/github",
     "config": {
-      "mcpKey": "filesystem",
+      "mcpKey": "github",
       "runtime": "npx",
       "args": [
         "-y",
@@ -439,6 +439,45 @@
         "placeholder": "Enter your Stripe API key",
         "value": "Enter your Stripe API key",
         "key": "STRIPE_API_KEY"
+      }
+    ]
+  },
+  {
+    "name": "Brave Search",
+    "description": "This app allows Claude to search the web using Brave Search.",
+    "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/brave-search",
+    "icon": {
+      "type": "url",
+      "url": {
+        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/brave.svg",
+        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/brave.svg"
+      }
+    },
+    "category": "Search",
+    "price": "Free",
+    "developer": "Anthropic",
+    "config": {
+      "mcpKey": "brave-search",
+      "runtime": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-brave-search"
+      ]
+    },
+    "features": [
+      {
+        "name": "Search the web",
+        "description": "Search the web using Brave Search",
+        "prompt": "Search for the latest news about artificial intelligence"
+      }
+    ],
+    "setup": [
+      {
+        "label": "Brave Search API Key",
+        "type": "input",
+        "placeholder": "Enter your Brave Search API key",
+        "value": "Enter your Brave Search API key",
+        "key": "BRAVE_SEARCH_API_KEY"
       }
     ]
   },
