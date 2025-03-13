@@ -392,6 +392,48 @@
     "setup": []
   },
   {
+    "name": "Gitingest-MCP",
+    "description": "Gitingest-MCP allows clients to use prompt friendly summaries of content from public Github repositories",
+    "sourceUrl": "https://github.com/puravparab/Gitingest-MCP",
+    "icon": {
+      "type": "url",
+      "url": {
+        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/gitingest.svg",
+        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/gitingest.svg"
+      }
+    },
+    "category": "Utilities",
+    "price": "Free",
+    "developer": "Purav Parab",
+    "config": {
+      "mcpKey": "gitingest",
+      "runtime": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/puravparab/gitingest-mcp",
+        "gitingest-mcp"
+      ]
+    },
+    "features": [
+      {
+        "name": "Get repository summary",
+        "description": "Retrieve a summary of a GitHub repository including repo name, file count, token count, and README content",
+        "prompt": "Summarize the GitHub repository username/repo-name"
+      },
+      {
+        "name": "View repository structure",
+        "description": "See the directory and file structure of a GitHub repository",
+        "prompt": "Show me the file structure of GitHub repository username/repo-name"
+      },
+      {
+        "name": "Analyze repository files",
+        "description": "Get and analyze specific files from a GitHub repository",
+        "prompt": "Get the file content from file.py in username/repo-name"
+      }
+    ],
+    "setup": []
+  },
+  {
     "name": "Stripe",
     "description": "Allows Claude to interact with Stripe for payment processing and managing financial data.",
     "icon": {
