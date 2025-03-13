@@ -449,8 +449,8 @@
     "icon": {
       "type": "url",
       "url": {
-        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/brave-search.svg",
-        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/brave-search.svg"
+        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/brave.svg",
+        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/brave.svg"
       }
     },
     "category": "Search",
