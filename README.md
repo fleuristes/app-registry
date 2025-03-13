@@ -51,7 +51,9 @@ Each MCP in the registry must conform to the following JSON schema:
     "mcpKey": "unique identifier for your MCP",
     "runtime": "runtime environment (e.g., npx, uvx)",
     "args": [
-      "array of arguments needed to run your MCP"
+      "array of arguments needed to run your MCP",
+      "--api-key=${API_KEY}",
+      "--base-url=${BASE_URL}"
     ]
   },
   "features": [
@@ -63,11 +65,18 @@ Each MCP in the registry must conform to the following JSON schema:
   ],
   "setup": [
     {
-      "label": "Configuration Label",
+      "label": "API Key",
       "type": "input",
-      "placeholder": "Placeholder text for the input field",
-      "value": "Default value or instructions",
-      "key": "ENVIRONMENT_VARIABLE_KEY"
+      "placeholder": "Enter your API key",
+      "value": "",
+      "key": "API_KEY"
+    },
+    {
+      "label": "Base URL",
+      "type": "input",
+      "placeholder": "https://api.example.com",
+      "value": "https://api.example.com",
+      "key": "BASE_URL"
     }
   ]
 }
@@ -99,6 +108,44 @@ Each MCP in the registry must conform to the following JSON schema:
 | `setup[].value` | Default value or instructions | If setup is included |
 | `setup[].key` | Environment variable key | If setup is included |
 
+### Environment Variable Support
+
+Fleur now supports using environment variables in your MCP configuration. This allows you to create more flexible and configurable MCPs without hardcoding sensitive information or user-specific settings.
+
+#### Using Environment Variables in Args
+
+You can include environment variables in your `args` array using the `${VARIABLE_NAME}` syntax. For example:
+
+```json
+"args": [
+  "start",
+  "--api-key=${API_KEY}",
+  "--base-url=${BASE_URL}",
+  "--port=${PORT}"
+]
+```
+
+When the MCP is installed, Fleur will automatically replace these variables with their corresponding values from the user's configuration.
+
+#### Environment Variable Features
+
+- **Simple variables**: `--api-key=${API_KEY}`
+- **Multiple variables in one argument**: `--connection=${HOST}:${PORT}`
+- **Variables with surrounding text**: `--path=prefix_${PATH_VAR}_suffix`
+- **Support for different value types**: Numbers, booleans, and strings are all supported
+- **Path-like variables**: `--config=${CONFIG_DIR}/settings.json`
+
+#### Setting Up Environment Variables
+
+To make your MCP configurable, define the required environment variables in the `setup` array. Each entry should include:
+
+1. A user-friendly label
+2. The type of input
+3. A placeholder or default value
+4. The environment variable key that matches the one used in your `args`
+
+This creates a seamless configuration experience for users while keeping sensitive information secure.
+
 ### Submission Guidelines
 
 1. Fork this repository
@@ -118,4 +165,4 @@ This repository is licensed under the Apache License 2.0 - see the LICENSE file 
 
 ## Support
 
-For questions or issues related to the Fleur App Registry, please open an issue in this repository. 
+For questions or issues related to the Fleur App Registry, please open an issue in this repository.

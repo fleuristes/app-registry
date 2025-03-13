@@ -85,7 +85,7 @@
     "developer": "MCP",
     "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/github",
     "config": {
-      "mcpKey": "filesystem",
+      "mcpKey": "github",
       "runtime": "npx",
       "args": [
         "-y",
@@ -407,13 +407,36 @@
     "developer": "Purav Parab",
     "config": {
       "mcpKey": "gitingest",
-      "runtime": "uv",
+      "runtime": "uvx",
       "args": [
-        "run",
-        "--with",
-        "mcp[cli]",
-        "gitingest-mcp",
-        "src/gitingest-mcp/server.py"
+        "--from",
+        "git+https://github.com/puravparab/gitingest-mcp",
+        "gitingest-mcp"
+      ]
+    }
+  },
+  {
+    "name": "Stripe",
+    "description": "Allows Claude to interact with Stripe for payment processing and managing financial data.",
+    "icon": {
+      "type": "url",
+      "url": {
+        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/stripe.svg",
+        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/stripe.svg"
+      }
+    },
+    "category": "Finance",
+    "price": "Free",
+    "developer": "Stripe",
+    "sourceUrl": "https://github.com/stripe/stripe-mcp",
+    "config": {
+      "mcpKey": "stripe",
+      "runtime": "npx",
+      "args": [
+        "-y",
+        "@stripe/mcp",
+        "--tools=all",
+        "--api-key=${STRIPE_API_KEY}"
       ]
     },
     "features": [
@@ -434,5 +457,68 @@
       }
     ],
     "setup": []
+        "name": "View payment information",
+        "description": "Retrieve and analyze payment data from your Stripe account",
+        "prompt": "Show me recent payments in my Stripe account"
+      },
+      {
+        "name": "Manage customers and invoices",
+        "description": "View and manage customer information and invoices",
+        "prompt": "Create a new invoice for customer X in Stripe"
+      }
+    ],
+    "setup": [
+      {
+        "label": "Get an API Key",
+        "value": "You can find your Stripe API key in the [Stripe Dashboard](https://dashboard.stripe.com/apikeys) under Developers > API keys.",
+        "type": "text"
+      },
+      {
+        "label": "Stripe API Key",
+        "type": "input",
+        "placeholder": "Enter your Stripe API key",
+        "value": "Enter your Stripe API key",
+        "key": "STRIPE_API_KEY"
+      }
+    ]
+  },
+  {
+    "name": "Brave Search",
+    "description": "This app allows Claude to search the web using Brave Search.",
+    "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/brave-search",
+    "icon": {
+      "type": "url",
+      "url": {
+        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/brave.svg",
+        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/brave.svg"
+      }
+    },
+    "category": "Search",
+    "price": "Free",
+    "developer": "Anthropic",
+    "config": {
+      "mcpKey": "brave-search",
+      "runtime": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-brave-search"
+      ]
+    },
+    "features": [
+      {
+        "name": "Search the web",
+        "description": "Search the web using Brave Search",
+        "prompt": "Search for the latest news about artificial intelligence"
+      }
+    ],
+    "setup": [
+      {
+        "label": "Brave Search API Key",
+        "type": "input",
+        "placeholder": "Enter your Brave Search API key",
+        "value": "Enter your Brave Search API key",
+        "key": "BRAVE_SEARCH_API_KEY"
+      }
+    ]
   }
 ]
