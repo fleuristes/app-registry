@@ -393,7 +393,7 @@
   },
   {
     "name": "Gitingest-MCP",
-    "description": "Gitingest-MCP allows clients to import from prompt friendly summaries of content from public Github repositories",
+    "description": "Gitingest-MCP allows clients to use prompt friendly summaries of content from public Github repositories",
     "sourceUrl": "https://github.com/puravparab/Gitingest-MCP",
     "icon": {
       "type": "url",
