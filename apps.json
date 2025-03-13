@@ -413,7 +413,25 @@
         "git+https://github.com/puravparab/gitingest-mcp",
         "gitingest-mcp"
       ]
-    }
+    },
+    "features": [
+      {
+        "name": "Get repository summary",
+        "description": "Retrieve a summary of a GitHub repository including repo name, file count, token count, and README content",
+        "prompt": "Summarize the GitHub repository username/repo-name"
+      },
+      {
+        "name": "View repository structure",
+        "description": "See the directory and file structure of a GitHub repository",
+        "prompt": "Show me the file structure of GitHub repository username/repo-name"
+      },
+      {
+        "name": "Analyze repository files",
+        "description": "Get and analyze specific files from a GitHub repository",
+        "prompt": "Get the file content from file.py in username/repo-name"
+      }
+    ],
+    "setup": []
   },
   {
     "name": "Stripe",
@@ -441,22 +459,6 @@
     },
     "features": [
       {
-        "name": "Get repository summary",
-        "description": "Retrieve a summary of a GitHub repository including repo name, file count, token count, and README content",
-        "prompt": "Summarize the GitHub repository username/repo-name"
-      },
-      {
-        "name": "View repository structure",
-        "description": "See the directory and file structure of a GitHub repository",
-        "prompt": "Show me the file structure of GitHub repository username/repo-name"
-      },
-      {
-        "name": "Analyze repository files",
-        "description": "Get and analyze specific files from a GitHub repository",
-        "prompt": "Get the file content from file.py in username/repo-name"
-      }
-    ],
-    "setup": []
         "name": "View payment information",
         "description": "Retrieve and analyze payment data from your Stripe account",
         "prompt": "Show me recent payments in my Stripe account"
