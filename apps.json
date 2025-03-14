@@ -35,6 +35,50 @@
     "setup": []
   },
   {
+    "name": "Fewsats",
+    "description": "Enable AI Agents to purchase anything in a secure way.",
+    "icon": {
+      "type": "url",
+      "url": {
+        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/fewsats-light.svg",
+        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/fewsats-dark.svg"
+      }
+    },
+    "category": "Utilities",
+    "price": "Free",
+    "developer": "Fewsats",
+    "sourceUrl": "https://github.com/Fewsats/fewsats-mcp",
+    "config": {
+      "mcpKey": "fewsats-mcp",
+      "runtime": "uvx",
+      "args": [
+        "fewsats-mcp",
+        "--fewsats-api-key=${FEWSATS_API_KEY}"
+      ]
+    },
+    "features": [
+      {
+        "name": "Pay L402 offer",
+        "description": "Pay for an offer in a L402 response",
+        "prompt": "Pay for the first offer in this L402 error response."
+      }
+    ],
+    "setup": [
+      {
+        "label": "Create an API Key",
+        "value": "Create or get a an API key for your account: [https://fewsats.com](https://fewsats.com)",
+        "type": "text"
+      },
+      {
+        "label": "Fewsats API Key",
+        "type": "input",
+        "placeholder": "Enter your Fewsats API key",
+        "value": "Enter your Fewsats API key",
+        "key": "FEWSATS_API_KEY"
+      }
+    ]
+  },
+  {
     "name": "Memory",
     "description": "This app lets Claude remember information about the user across chats.",
     "icon": {
