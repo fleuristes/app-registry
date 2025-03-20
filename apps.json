@@ -170,6 +170,50 @@
     ]
   },
   {
+    "name": "Figma",
+    "description": "Allows Claude to interact with Figma",
+    "sourceUrl": "https://github.com/GLips/Figma-Context-MCP",
+    "icon": {
+      "type": "url",
+      "url": {
+        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/figma.svg",
+        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/figma.svg"
+      }
+    },
+    "category": "Productivity",
+    "price": "Free",
+    "developer": "Graham Lipsman",
+    "config": {
+      "mcpKey": "figma-developer-mcp",
+      "runtime": "npx",
+      "args": [
+        "-y",
+        "figma-developer-mcp"
+      ]
+    },
+    "features": [
+      {
+        "name": "Ask Claude about your Figma file",
+        "description": "Paste a link to a Figma file or a selection within a Figma file",
+        "prompt": "What is the design layout contained in this Figma file?"
+      }
+    ],
+    "setup": [
+      {
+        "label": "Generate an API Key",
+        "value": "Create or get a Figma API key for your account: [https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens)",
+        "type": "text"
+      },
+      {
+        "label": "Figma API Key",
+        "type": "input",
+        "placeholder": "Enter your Figma API key",
+        "value": "Enter your Figma API key",
+        "key": "FIGMA_API_KEY"
+      }
+    ]
+  },
+  {
     "name": "Slack",
     "description": "Allows Claude to interact with Slack",
     "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/slack",
