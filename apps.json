@@ -510,5 +510,69 @@
       }
     ],
     "setup": []
+  },
+  {
+    "name": "Aiven",
+    "description": "Navigate your Aiven projects and interact with the PostgreSQL®, Apache Kafka®, ClickHouse® and OpenSearch® services",
+    "icon": {
+      "type": "url",
+      "url": {
+        "light": "https://aiven.io/assets/img/aiven-logo.png",
+        "dark": "https://aiven.io/assets/img/aiven-logo.png"
+      }
+    },
+    "category": "Utilities",
+    "price": "Free",
+    "developer": "Aiven",
+    "sourceUrl": "https://github.com/Aiven-Open/mcp-aiven",
+    "config": {
+      "mcpKey": "mcp-aiven",
+      "runtime": "uv /Users/francescotisiot/Documents/GitHub/mcp-aiven-old run --with-editable /Users/francescotisiot/Documents/GitHub/mcp-aiven-old --python 3.13 mcp-aiven",
+      "args": [
+        "--directory",
+        "${FOLDER_DIRECTORY}",
+        "run",
+        "--with",
+        "${FOLDER_DIRECTORY}",
+        "--python",
+        "3.13",
+        "mcp-aiven",
+        "--env",
+        "${PATH_TO_ENV}"
+      ]
+    },
+    "features": [
+      {
+        "name": "List Projects",
+        "description": "Listing the Aiven Projects",
+        "prompt": "List my Aiven projects"
+      },
+      {
+        "name": "List Services",
+        "description": "Listing the Aiven Services within a Projects",
+        "prompt": "List my Aiven services in project X"
+      },
+      {
+        "name": "Get Service",
+        "description": "Get the service details",
+        "prompt": "Get the details of service X"
+      }
+    ],
+    "setup": [
+      {
+        "label": "Folder Directory",
+        "type": "input",
+        "placeholder": "The folder where the MCP is stored",
+        "value": "",
+        "key": "FOLDER_DIRECTORY"
+      },
+      {
+        "label": "Environment variable File",
+        "type": "input",
+        "placeholder": "A File containing the AIVEN_BASE_URL, AIVEN_PROJECT_NAME and AIVEN_TOKEN",
+        "value": "",
+        "key": "PATH_TO_ENV"
+      }
+    ]
   }
 ]
